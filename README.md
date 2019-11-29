@@ -33,6 +33,20 @@
   
   
 아래 3가지 사항은 픽셀 쉐이더에서 각각의 픽셀 값을 정할 때 distortion scale을 얼마나 줄 것인지에 대한 함수를 제작하여 구현하였습니다.  
-'''
+```
+// pos : 픽셀 위치, hitPoint : (x,y,z=충돌 위치, w=distortion범위 확산 거리)
 float GetDistortionScale(float3 pos, float4 hitPoint)
-'''  
+```  
+- 충돌 위치로부터 distortion층이 퍼져 나갈 것
+- distortion층은 중앙이 가장 distortion되고 끝 부분으로 갈수록 줄어들 것  
+``` 
+float distortion = 0.0f;
+// 해당 픽셀과 초기 충돌 위치와의 거리
+float dis = distance(hitPoint.xyz, pos);
+// distortion되는 영역의 크기                            
+float hitSize = 2.0f;
+// 해당 픽셀이 영역에 들어왔는지 확인하고 중앙에서부터 멀어 질수록 희미하게만든다.
+distortion = (hitPoint.w - dis) / (hitSize / 2.0f);
+distortion = max(0.0f, -(distortion*distortion) + 1.0f);
+``` 
+
