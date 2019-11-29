@@ -35,7 +35,7 @@ float GetDistortionScale(float3 pos, float4 hitPoint)
 ```  
 ### 2) 충돌 위치로부터 distortion층이 퍼져 나갈 것
 ### 3) distortion층은 중앙이 가장 distortion되고 끝 부분으로 갈수록 줄어들 것  
-&nbsp;&nbsp;&nbsp;&nbsp;distortion영역의 범위를 넘어서면 0으로 만들면서 영역 내부에서는 끝 부분으로 갈수록 값이 줄어들도록 함수를 설계하였 습니다.
+&nbsp;&nbsp;&nbsp;&nbsp;distortion영역의 범위를 넘어서면 0으로 만들고 영역 내부에서는 끝 부분으로 갈수록 값이 줄어들도록 함수를 설계하였 습니다.
 ```c
 float distortion = 0.0f;
 // 해당 픽셀과 초기 충돌 위치와의 거리
@@ -50,7 +50,7 @@ distortion = max(0.0f, -(distortion*distortion) + 1.0f);
 |:--:| 
 | *x축 : 현재 distortion확산 중심으로부터의 normalize된 거리, y축 : distortion scale* |  
 ### 4) 충돌 위치로부터 퍼질수록 distortion이 작아지며 일정 거리를 넘어가면 사라질 것  
-&nbsp;&nbsp;&nbsp;&nbsp;충돌 시작점부터 distortion이 줄어들어 구 영역으 반대편쯤되면 보이지 않게 함수를 설계하였습니다. 
+&nbsp;&nbsp;&nbsp;&nbsp;충돌점부터 distortion이 줄어들어 구 영역으 반대편이되면 보이지 않게 함수를 설계하였습니다. 
 ```c
 // 충돌위치의 구의 일정 위치를 넘어가면 보이지 않게 한다.
 float maxDistance = 6.0f;
