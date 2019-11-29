@@ -35,7 +35,7 @@
 float GetDistortionScale(float3 pos, float4 hitPoint)
 ```  
 ### 2) 충돌 위치로부터 distortion층이 퍼져 나갈 것
-### 3) distortion층은 중앙이 가장 distortion되고 끝 부분으로 갈수록 줄어들 것  
+### 3) distortion층은 중앙이 가장 강하고 끝 부분으로 갈수록 줄어들 것  
 distortion영역의 범위를 넘어서면 0으로 만들고 영역 내부에서는 끝 부분으로 갈수록 값이 줄어들도록 함수를 설계하였 습니다.
 ```glsl
 float distortion = 0.0f;
