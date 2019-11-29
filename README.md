@@ -14,10 +14,10 @@
 ## 이펙트 구현
 위의 동영상에는 따로 코드가 없어 이미지를 보고 추측하여 구현하였습니다.
 구현에는 아래 4가지 요소를 포함하고 싶었습니다.
-- 구형 바깥 부분이 빛날 것
-- 충돌 위치로부터 distortion층이 퍼져 나갈 것
-- distortion층은 중앙이 가장 distortion되고 끝 부분으로 갈수록 줄어들 것
-- 충돌 위치로부터 퍼질수록 distortion이 작아지며 일정 거리를 넘어가면 사라질 것
+1) 구형 바깥 부분이 빛날 것
+2) 충돌 위치로부터 distortion층이 퍼져 나갈 것
+3) distortion층은 중앙이 가장 distortion되고 끝 부분으로 갈수록 줄어들 것
+4) 충돌 위치로부터 퍼질수록 distortion이 작아지며 일정 거리를 넘어가면 사라질 것
 
 
 | ![TimeStopEffect](https://user-images.githubusercontent.com/11326612/69849664-b650f080-12c0-11ea-8956-21d7cffa1b50.gif) |
