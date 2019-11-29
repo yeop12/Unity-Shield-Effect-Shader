@@ -55,8 +55,8 @@ distortion = max(0.0f, -(distortion*distortion) + 1.0f);
 | *x축 : 현재 distortion확산 중심으로부터의 normalize된 거리, y축 : distortion scale* |  
 - 충돌 위치로부터 어느정도 퍼지고 나면 사라질 것  
   → distortion층이 구 반대쪽까지 넘어가게 되면 이상해 추가한 사항입니다. 최대 값이 넘어가면 0이 되도록 설계하였 습니다.  
-``` 
+```c
 // 충돌위치의 구의 일정 위치를 넘어가면 보이지 않게 한다.
-				float maxDistance = 6.0f;
-				distortion *= max(0.0f, (-dis/maxDistance + 1.0f));
+float maxDistance = 6.0f;
+distortion *= max(0.0f, (-dis/maxDistance + 1.0f));
 ``` 
