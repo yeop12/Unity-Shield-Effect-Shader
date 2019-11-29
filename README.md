@@ -26,19 +26,15 @@
 
 
 ## 구현 방법
-- 구형 바깥 부분이 빛날 것
-
-
-  → 림 쉐이더로 구현하였습니다.
-  
-  
-아래 3가지 사항은 픽셀 쉐이더에서 각각의 픽셀 값을 정할 때 distortion scale을 얼마나 줄 것인지에 대한 함수를 제작하여 구현하였습니다.  
+### 구형 바깥 부분이 빛날 것  
+  → 림 쉐이더로 구현하였습니다.  
+###아래 3가지 사항은 픽셀 쉐이더에서 각각의 픽셀 값을 정할 때 distortion scale을 얼마나 줄 것인지에 대한 함수를 제작하여 구현하였습니다.  
 ```c
 // pos : 픽셀 위치, hitPoint : (x,y,z=충돌 위치, w=distortion범위 확산 거리)
 float GetDistortionScale(float3 pos, float4 hitPoint)
 ```  
-- 충돌 위치로부터 distortion층이 퍼져 나갈 것
-- distortion층은 중앙이 가장 distortion되고 끝 부분으로 갈수록 줄어들 것  
+### 충돌 위치로부터 distortion층이 퍼져 나갈 것
+### distortion층은 중앙이 가장 distortion되고 끝 부분으로 갈수록 줄어들 것  
   → distortion영역의 범위를 넘어서면 0으로 만들면서 영역 내부에서는 끝 부분으로 갈수록 값이 줄어들도록 함수를 설계하였 습니다.
 ```c
 float distortion = 0.0f;
@@ -53,7 +49,7 @@ distortion = max(0.0f, -(distortion*distortion) + 1.0f);
 | ![distortion확산](https://user-images.githubusercontent.com/11326612/69851549-4b55e880-12c5-11ea-8a6d-4b135c26b932.PNG) |
 |:--:| 
 | *x축 : 현재 distortion확산 중심으로부터의 normalize된 거리, y축 : distortion scale* |  
-- 충돌 위치로부터 퍼질수록 distortion이 작아지며 일정 거리를 넘어가면 사라질 것  
+### 충돌 위치로부터 퍼질수록 distortion이 작아지며 일정 거리를 넘어가면 사라질 것  
   → 충돌 시작점부터 distortion이 줄어들어 구 영역으 반대편쯤되면 보이지 않게 함수를 설계하였습니다. 
 ```c
 // 충돌위치의 구의 일정 위치를 넘어가면 보이지 않게 한다.
