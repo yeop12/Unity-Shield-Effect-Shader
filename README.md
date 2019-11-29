@@ -55,7 +55,7 @@ distortion = max(0.0f, -(distortion*distortion) + 1.0f);
 ```glsl
 // 충돌위치의 구의 일정 위치를 넘어가면 보이지 않게 한다.
 float maxDistance = 6.0f;
-distortion *= max(0.0f, (-dis/maxDistance + 1.0f));
+distortion *= max(0.0f, (-dis*dis/maxDistance*maxDistance + 1.0f));
 ```
 | ![distortion확산2](https://user-images.githubusercontent.com/11326612/69853290-d0db9780-12c9-11ea-92b7-77c749c24cbe.PNG) |
 |:--:| 
