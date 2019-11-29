@@ -20,6 +20,6 @@
 - 충돌 위치로부터 어느정도 퍼지고 나면 사라질 것
 
 
-| ![TimeStopEffect](https://user-images.githubusercontent.com/11326612/69849439-0b403700-12c0-11ea-9ae9-f919c5467230.gif) |
+| ![TimeStopEffect](https://user-images.githubusercontent.com/11326612/69849664-b650f080-12c0-11ea-8956-21d7cffa1b50.gif) |
 |:--:| 
 | *구현한 이펙트* |
