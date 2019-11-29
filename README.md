@@ -18,3 +18,8 @@
 - 충돌 위치로부터 distortion층이 퍼져 나갈 것
 - distortion층은 중앙이 가장 distortion되고 끝 부분으로 갈수록 줄어들 것
 - 충돌 위치로부터 어느정도 퍼지고 나면 사라질 것
+
+
+| ![TimeStopEffect](https://user-images.githubusercontent.com/11326612/69849439-0b403700-12c0-11ea-9ae9-f919c5467230.gif) |
+|:--:| 
+| *구현한 이펙트* |
