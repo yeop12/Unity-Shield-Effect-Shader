@@ -28,7 +28,8 @@
 ## 구현 방법
 ### 1) 구형 바깥 부분이 빛날 것  
 림 쉐이더로 구현하였습니다.  
-### 2,3,4) 아래 3가지 사항은 픽셀 쉐이더에서 각각의 픽셀 값을 정할 때 distortion scale을 얼마나 줄 것인지에 대한 함수를 제작하여 구현하였습니다.  
+### 2,3,4) 공통  
+아래 3가지 사항은 픽셀 쉐이더에서 각각의 픽셀 값을 정할 때 distortion scale을 얼마나 줄 것인지에 대한 함수를 제작하여 구현하였습니다.  
 ```c
 // pos : 픽셀 위치, hitPoint : (x,y,z=충돌 위치, w=distortion범위 확산 거리)
 float GetDistortionScale(float3 pos, float4 hitPoint)
