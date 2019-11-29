@@ -53,7 +53,7 @@ distortion = max(0.0f, -(distortion*distortion) + 1.0f);
 | ![distortion확산](https://user-images.githubusercontent.com/11326612/69851549-4b55e880-12c5-11ea-8a6d-4b135c26b932.PNG) |
 |:--:| 
 | *x축 : 현재 distortion확산 중심으로부터의 normalize된 거리, y축 : distortion scale* |  
-- 충돌 위치로부터 퍼질수록 distortion이 작아지며 일정 거리를 넘어가면 사라질 것 
+- 충돌 위치로부터 퍼질수록 distortion이 작아지며 일정 거리를 넘어가면 사라질 것  
   → 충돌 시작점부터 distortion이 줄어들어 구 영역으 반대편쯤되면 보이지 않게 함수를 설계하였습니다. 
 ```c
 // 충돌위치의 구의 일정 위치를 넘어가면 보이지 않게 한다.
