@@ -60,3 +60,6 @@ distortion = max(0.0f, -(distortion*distortion) + 1.0f);
 float maxDistance = 6.0f;
 distortion *= max(0.0f, (-dis/maxDistance + 1.0f));
 ```
+| ![distortion확산2](https://user-images.githubusercontent.com/11326612/69853290-d0db9780-12c9-11ea-92b7-77c749c24cbe.PNG) |
+|:--:| 
+| *x축 : 충돌 지점부터 픽셀까지의 거리, y축 : distortion scale* |
