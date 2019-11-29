@@ -23,3 +23,16 @@
 | ![TimeStopEffect](https://user-images.githubusercontent.com/11326612/69849664-b650f080-12c0-11ea-8956-21d7cffa1b50.gif) |
 |:--:| 
 | *구현한 이펙트* |
+
+
+## 구현 방법
+- 구형 바깥 부분이 빛날 것
+
+
+  → 림 쉐이더로 구현하였습니다.
+  
+  
+아래 3가지 사항은 픽셀 쉐이더에서 각각의 픽셀 값을 정할 때 distortion scale을 얼마나 줄 것인지에 대한 함수를 제작하여 구현하였습니다.  
+'''
+float GetDistortionScale(float3 pos, float4 hitPoint)
+'''  
