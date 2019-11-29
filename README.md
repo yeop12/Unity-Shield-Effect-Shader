@@ -6,4 +6,6 @@
 인터넷을 돌아다니다가 원하던 형태의 이팩트를 발견하여 참고하였습니다.
 
 
-![UDK_Shield_Effect](https://user-images.githubusercontent.com/11326612/69848410-67558c00-12bd-11ea-973d-6a7bcf67c27c.gif)
+| ![UDK_Shield_Effect](https://user-images.githubusercontent.com/11326612/69848410-67558c00-12bd-11ea-973d-6a7bcf67c27c.gif) |
+|:--:| 
+| *Space* |
